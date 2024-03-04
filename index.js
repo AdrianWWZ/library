@@ -1,16 +1,16 @@
 const myLibrary = [
   {
     title: "Alex Rider Point Blanc",
-    image: "img/book-cover.jpg",
+    image: "img/book-cover1.jpg",
     author: "Anthony Horowitz",
     pages: 320,
     haveRead: true,
   },
   {
-    title: "Alex Rider Point Blanc",
-    image: "img/book-cover.jpg",
-    author: "Anthony Horowitz",
-    pages: 320,
+    title: "Python Machine Learning",
+    image: "img/book-cover2.jpg",
+    author: "Sebastian Raschka",
+    pages: 456,
     haveRead: false,
   },
 ];
@@ -57,6 +57,14 @@ const displayBook = (book) => {
   } else {
     readButton.innerText = "Unread";
   }
+  readButton.addEventListener("click", () => {
+    if (book.haveRead) {
+      readButton.innerText = "Unread";
+    } else {
+      readButton.innerText = "Read";
+    }
+    book.haveRead = !book.haveRead;
+  });
 
   bookContainer.append(bookTitle, bookImage, bookAuthor, bookPages, readButton);
 
@@ -75,10 +83,15 @@ showDialogButton.addEventListener("click", () => {
 closeDialogButton.addEventListener("click", () => {
   dialog.close();
   const inputTitle = document.querySelector("#title").value;
+  document.querySelector("#title").value = "";
   const inputImage = document.querySelector("#image").value;
+  document.querySelector("#image").value = "";
   const inputAuthor = document.querySelector("#author").value;
+  document.querySelector("#author").value = "";
   const inputPages = document.querySelector("#pages").value;
+  document.querySelector("#pages").value = "";
   const inputRead = document.querySelector("#haveRead").checked;
+  document.querySelector("#haveRead").checked = false;
   addBookToLibrary(inputTitle, inputImage, inputAuthor, inputPages, inputRead);
 });
 
