@@ -26,6 +26,7 @@ body {
   font-size: 36px;
   font-weight: 800;
   z-index: 1;
+  box-shadow: 10px 10px 10px #1e293b;
 }
 
 .sidebar {
@@ -34,6 +35,8 @@ body {
   top: 10%;
   width: 15%;
   height: 85%;
+  z-index: 2;
+  box-shadow: 10px 10px 10px #1e293b;
 }
 
 .sidebar ul {
@@ -54,7 +57,9 @@ body {
 .sidebar ul li button:hover,
 .sidebar ul li button:hover:focus,
 .add-book:hover,
-.add-book:focus {
+.add-book:focus,
+.close-button:hover,
+.close-button:focus {
   background-color: #f1f5f9; /* 100 */
   color: #1e293b; /* 800 */
   cursor: pointer;
@@ -85,6 +90,7 @@ body {
   border-radius: 15px;
   padding: 1rem;
   gap: 1rem;
+  box-shadow: 10px 10px 10px #1e293b;
 }
 
 .book h1 {
@@ -127,4 +133,70 @@ body {
   font-weight: 800;
   padding: 0 1rem;
   margin-right: 2rem;
+}
+
+dialog {
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 800px;
+  height: 520px;
+  border: none;
+  border-radius: 25px;
+  padding: 2rem 2rem 0 2rem;
+  background-color: #0f172a; /* 900 */
+  color: #f1f5f9; /* 100 */
+  box-shadow: 10px 10px 10px #1e293b;
+}
+
+/* 
+dialog::backdrop {
+  background-image: linear-gradient(
+    45deg,
+    magenta,
+    rebeccapurple,
+    dodgerblue,
+    green
+  );
+  opacity: 0.75;
+} */
+
+form {
+  display: flex;
+  flex-flow: column;
+  gap: 1.5rem;
+}
+
+.input {
+  display: flex;
+  flex-flow: column;
+  gap: 0.5rem;
+}
+
+.input input {
+  height: 2rem;
+  border: none;
+  border-radius: 10px;
+  padding: 0.5rem;
+  font-size: 18px;
+  background-color: #475569;
+  color: #f1f5f9;
+}
+
+.read-check input {
+  width: 20px;
+  height: 20px;
+  margin-left: 1rem;
+}
+
+.close-button {
+  align-self: end;
+  padding: 0.5rem 1rem;
+  font-size: 24px;
+  font-weight: 800;
+  border: none;
+  border-radius: 15px;
+  background-color: #475569;
+  color: #f1f5f9;
 }

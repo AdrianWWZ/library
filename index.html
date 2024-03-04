@@ -13,23 +13,32 @@
         <li><button>BOOKS</button></li>
       </ul>
     </div>
-    <div class="main-content">
-      <div class="book">
-        <h1>Alex Rider Point Blanc</h1>
-        <img
-          src="img/book-cover.jpg"
-          alt="Image of book cover"
-          class="book-image"
-        />
-        <div class="book-author">Anthony Horowitz</div>
-        <div class="book-pages">320 Pages</div>
-        <button class="read-button">Unread</button>
-      </div>
-      <div class="book"></div>
-      <div class="book"></div>
-      <div class="book"></div>
-      <div class="book"></div>
-    </div>
+    <div class="main-content"></div>
+    <dialog>
+      <form action="post">
+        <div class="input">
+          <label for="title">*TITLE</label>
+          <input type="text" id="title" name="title" required />
+        </div>
+        <div class="input">
+          <label for="image">IMAGE URL</label>
+          <input type="text" id="image" name="image" />
+        </div>
+        <div class="input">
+          <label for="author">*AUTHOR</label>
+          <input type="text" id="author" name="author" required />
+        </div>
+        <div class="input">
+          <label for="pages">*PAGES</label>
+          <input type="text" id="pages" name="pages" required />
+        </div>
+        <div class="read-check">
+          Have you read this book Yet?
+          <input type="checkbox" name="haveRead" id="haveRead" />
+        </div>
+        <button class="close-button" type="button">Submit</button>
+      </form>
+    </dialog>
     <div class="footer">
       <button class="add-book">Add Book</button>
     </div>
