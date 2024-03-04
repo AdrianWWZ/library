@@ -75,6 +75,8 @@ const displayBook = (book) => {
 const dialog = document.querySelector("dialog");
 const showDialogButton = document.querySelector(".add-book");
 const closeDialogButton = document.querySelector(".close-button");
+const cancelDialogButton = document.querySelector(".cancel-button");
+const addButton = document.querySelector(".add-button");
 
 showDialogButton.addEventListener("click", () => {
   dialog.showModal();
@@ -95,7 +97,10 @@ closeDialogButton.addEventListener("click", () => {
   addBookToLibrary(inputTitle, inputImage, inputAuthor, inputPages, inputRead);
 });
 
-const addButton = document.querySelector(".add-button");
+cancelDialogButton.addEventListener("click", () => {
+  dialog.close();
+});
+
 addButton.addEventListener("click", () => {
   dialog.showModal();
 });
