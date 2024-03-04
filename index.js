@@ -69,7 +69,7 @@ const displayBook = (book) => {
   bookContainer.append(bookTitle, bookImage, bookAuthor, bookPages, readButton);
 
   const mainContainer = document.querySelector(".main-content");
-  mainContainer.appendChild(bookContainer);
+  mainContainer.insertBefore(bookContainer, addButton);
 };
 
 const dialog = document.querySelector("dialog");
@@ -93,6 +93,11 @@ closeDialogButton.addEventListener("click", () => {
   const inputRead = document.querySelector("#haveRead").checked;
   document.querySelector("#haveRead").checked = false;
   addBookToLibrary(inputTitle, inputImage, inputAuthor, inputPages, inputRead);
+});
+
+const addButton = document.querySelector(".add-button");
+addButton.addEventListener("click", () => {
+  dialog.showModal();
 });
 
 myLibrary.forEach((book) => {

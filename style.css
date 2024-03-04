@@ -79,6 +79,17 @@ body {
   align-items: center;
 }
 
+.add-button {
+  border: none;
+  color: #f1f5f9;
+  font-size: 96px;
+  font-weight: 900;
+}
+
+.add-button:hover {
+  opacity: 0.8;
+}
+
 .book {
   background-color: #475569; /* 600 */
   height: 500px;
