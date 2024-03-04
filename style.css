@@ -161,17 +161,10 @@ dialog {
   box-shadow: 10px 10px 10px #1e293b;
 }
 
-/* 
 dialog::backdrop {
-  background-image: linear-gradient(
-    45deg,
-    magenta,
-    rebeccapurple,
-    dodgerblue,
-    green
-  );
+  background-color: #1e293b;
   opacity: 0.75;
-} */
+}
 
 form {
   display: flex;
